@@ -1,1 +1,245 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>বাজার ভালো — তাজা বাজার, ঘরে বসে</title>
+<meta name="description" content="বাংলাদেশের সেরা অনলাইন বাজার। তাজা ফলমূল, সবজি, মাছ ও জামাকাপড়।" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">
+      <span>📞 +৮৮০ ১৭XX-XXXXXX</span>
+      <span>📍 ঢাকা, বাংলাদেশ</span>
+    </div>
+    <div class="topbar-right">
+      <span>ফ্রি ডেলিভারি ৫০০৳ এর উপরে</span>
+      <span>|</span>
+      <span>ট্র্যাক অর্ডার</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <div class="logo-badge">বা</div>
+      <div class="logo-text">
+        <h1>বাজার ভালো</h1>
+        <p>তাজা বাজার, ঘরে বসে</p>
+      </div>
+    </div>
+
+    <div class="loc-pill">
+      📍 <span>ঢাকা</span> ▾
+    </div>
+
+    <div class="search-wrap">
+      <input type="text" placeholder="ফল, সবজি, মাছ বা জামাকাপড় খুঁজুন..." />
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="openCart">
+        🛒 <span class="cart-label">কার্ট</span>
+        <span class="cart-count" id="cartCount" style="display:none">0</span>
+      </button>
+      <button class="menu-btn" id="menuToggle">☰</button>
+    </div>
+  </div>
+
+  <div class="container mobile-search">
+    <input type="text" placeholder="কী খুঁজছেন?" />
+    <button class="search-btn">🔍</button>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#">ফলমূল</a>
+    <a href="#">সবজি</a>
+    <a href="#">মাছ</a>
+    <a href="#">জামাকাপড়</a>
+    <a href="#">অফার</a>
+    <a href="#">আমাদের সম্পর্কে</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="blob blob-y"></div>
+  <div class="blob blob-g"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><span class="pulse"></span>🎉 বিশেষ অফার - ৩০% ছাড়!</div>
+      <h1>তাজা বাজার,<br/><span class="grad-text">ঘরে বসেই!</span></h1>
+      <p>ফলমূল, সবজি, মাছ ও জামাকাপড় — সবকিছু পাবেন এক জায়গায়। তাজা পণ্য, দ্রুত ডেলিভারি, সেরা দাম।</p>
+      <div class="hero-cta">
+        <button class="btn-primary">কেনাকাটা শুরু করুন →</button>
+        <button class="btn-ghost">অফার দেখুন</button>
+      </div>
+    </div>
+
+    <div class="hero-features">
+      <div class="hf-card"><div class="hf-icon g-blue">🚚</div><h4>ফ্রি ডেলিভারি</h4><p>৫০০৳ এর উপরে</p></div>
+      <div class="hf-card"><div class="hf-icon g-orange">⏱️</div><h4>দ্রুত পৌঁছানো</h4><p>৩০ মিনিটের মধ্যে</p></div>
+      <div class="hf-card"><div class="hf-icon g-green">🛡️</div><h4>১০০% তাজা</h4><p>গ্যারান্টি সহ</p></div>
+      <div class="hf-card"><div class="hf-icon g-purple">↻</div><h4>সহজ রিটার্ন</h4><p>কোনো প্রশ্ন নেই</p></div>
+    </div>
+  </div>
+
+  <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path d="M0 50L48 45C96 40 192 30 288 28C384 26 480 32 576 40C672 48 768 58 864 55C960 52 1056 36 1152 30C1248 24 1344 28 1392 30L1440 32V100H0V50Z" fill="#faf9f6"/>
+  </svg>
+</section>
+
+<!-- Categories -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>ক্যাটাগরি সমূহ</h2>
+        <p>আপনার পছন্দের ক্যাটাগরি থেকে বেছে নিন</p>
+      </div>
+      <button class="link-btn">সব দেখুন →</button>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- Discounted Section -->
+<section class="section" id="discountSection">
+  <div class="container">
+    <div class="section-head">
+      <div class="head-with-icon">
+        <div class="head-icon g-red">%</div>
+        <div>
+          <h2>আজকের বিশেষ ছাড়</h2>
+          <p>সীমিত সময়ের অফার — এখনই কিনুন!</p>
+        </div>
+      </div>
+    </div>
+    <div class="product-grid" id="discountGrid"></div>
+  </div>
+</section>
+
+<!-- Top / Category Products -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="head-with-icon">
+        <div class="head-icon g-green" id="topIcon">📈</div>
+        <div>
+          <h2 id="topTitle">জনপ্রিয় পণ্য</h2>
+          <p id="topSubtitle">সবচেয়ে বেশি বিক্রি হওয়া পণ্য</p>
+        </div>
+      </div>
+    </div>
+    <div class="product-grid" id="topGrid"></div>
+  </div>
+</section>
+
+<!-- Promo Banner -->
+<section class="section">
+  <div class="container">
+    <div class="promo">
+      <div class="promo-blob1"></div>
+      <div class="promo-blob2"></div>
+      <div class="promo-inner">
+        <div>
+          <div class="promo-pill"><span class="pulse"></span>সীমিত সময়ের অফার</div>
+          <h2>ইলিশ মাছ — ২০% ছাড়!</h2>
+          <p>তাজা ইলিশ সরাসরি পদ্মা থেকে — এখনই অর্ডার করুন</p>
+        </div>
+        <button class="btn-white">অর্ডার করুন 🐟</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section section-white">
+  <div class="container">
+    <div class="feat-grid">
+      <div class="feat-card bg-blue"><div class="feat-ic g-blue">🚚</div><h3>ফ্রি ডেলিভারি</h3><p>৫০০৳ এর উপরে অর্ডারে ফ্রি ডেলিভারি</p></div>
+      <div class="feat-card bg-orange"><div class="feat-ic g-orange">⏱️</div><h3>দ্রুত ডেলিভারি</h3><p>৩০ মিনিটের মধ্যে আপনার দোরগোড়ায়</p></div>
+      <div class="feat-card bg-green"><div class="feat-ic g-green">🛡️</div><h3>১০০% তাজা</h3><p>সকল পণ্য তাজা ও মানসম্মত গ্যারান্টি</p></div>
+      <div class="feat-card bg-purple"><div class="feat-ic g-purple">🎧</div><h3>২৪/৭ সাপোর্ট</h3><p>যেকোনো সময় আমাদের সাথে যোগাযোগ করুন</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-badge">বা</div>
+        <div class="logo-text"><h3>বাজার ভালো</h3><p>তাজা বাজার, ঘরে বসে</p></div>
+      </div>
+      <p class="footer-desc">বাংলাদেশের সেরা অনলাইন বাজার। তাজা ফলমূল, সবজি, মাছ ও জামাকাপড় — সবকিছু এক জায়গায়।</p>
+      <div class="socials"><a href="#">f</a><a href="#">ig</a><a href="#">▶</a></div>
+    </div>
+    <div>
+      <h4>দ্রুত লিংক</h4>
+      <ul><li><a>ফলমূল</a></li><li><a>সবজি</a></li><li><a>মাছ</a></li><li><a>জামাকাপড়</a></li><li><a>অফার</a></li></ul>
+    </div>
+    <div>
+      <h4>সাহায্য</h4>
+      <ul><li><a>আমাদের সম্পর্কে</a></li><li><a>যোগাযোগ</a></li><li><a>ডেলিভারি নীতি</a></li><li><a>রিটার্ন নীতি</a></li><li><a>FAQ</a></li></ul>
+    </div>
+    <div>
+      <h4>যোগাযোগ</h4>
+      <ul class="contact-list">
+        <li>📍 ঢাকা, বাংলাদেশ</li>
+        <li>📞 +৮৮০ ১৭XX-XXXXXX</li>
+        <li>✉️ info@bazarvalo.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© ২০২৪ বাজার ভালো — সর্বস্বত্ব সংরক্ষিত</p>
+    <div><span>গোপনীয়তা নীতি</span><span>শর্তাবলী</span></div>
+  </div>
+</footer>
+
+<!-- Cart Sidebar -->
+<div class="cart-backdrop" id="cartBackdrop"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <div>
+      <h2>🛍️ আপনার কার্ট</h2>
+      <p id="cartItemsLabel">০টি পণ্য</p>
+    </div>
+    <button id="closeCart" class="cart-close">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span>মোট:</span><strong id="cartTotal">৳০</strong></div>
+    <button class="btn-primary full">চেকআউট করুন</button>
+    <button class="btn-clear" id="clearCart">কার্ট খালি করুন</button>
+  </div>
+</aside>
+
+<!-- Mobile bottom nav -->
+<nav class="mob-nav">
+  <button class="active"><span>🏠</span><span>হোম</span></button>
+  <button><span>🗂️</span><span>ক্যাটাগরি</span></button>
+  <button id="openCartMobile"><span>🛒</span><span>কার্ট</span></button>
+  <button><span>👤</span><span>প্রোফাইল</span></button>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
